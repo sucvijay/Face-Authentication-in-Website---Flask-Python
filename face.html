@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" autoplay style="aspect-ratio: 16/9; height:720px"> </video>
+    <canvas id="canvas" style="overflow:auto"></canvas>
+    <p id="printresult"></p>
+    <button onclick="capture()" type="button" >Scan</button>
+
+    <script>
+        var video = document.querySelector("video");
+
+        if (navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+              video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+              console.log("Something went wrong!");
+            });
+        }
+
+        var resultb64="";
+        async function capture() {       
+           var canvas = document.getElementById('canvas');     
+           var video = document.getElementById('video');
+           canvas.width = video.videoWidth;
+           canvas.height = video.videoHeight;
+           canvas.getContext('2d').drawImage(video, 0, 0);  
+           document.getElementById("printresult").innerHTML = canvas.toDataURL(); 
+
+           const d = await fetch("http://127.0.0.1:5000/check",{method:"POST",mode:"cors",body:JSON.stringify({img:canvas.toDataURL()}),headers:{
+            'Content-type':'application/json', 
+            'Accept':'application/json'
+        }});
+           
+           document.getElementById("printresult").innerHTML = d.json(); 
+
+        }
+        
+
+
+    </script>
+
+
+</body>
+</html>

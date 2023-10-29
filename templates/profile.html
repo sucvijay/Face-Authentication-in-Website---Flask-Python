@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="register.css" >
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+
+</head>
+<body>
+    <nav>
+        <a href="register" id="register.html" >REGISTER</a>
+    </nav>
+
+    <div class="main">
+
+
+        <div class="regbox" style="width: 100vw;">
+
+            <form>
+
+
+                <div>
+                    <h2 style="text-align: center;">Details</h2>
+
+                {% for key, value in data.items() %}
+                 
+                <div class="each">
+
+                <p style="margin-bottom:10px;background-color:'gray';">{{key.upper()}}</p>
+                
+                <input type="text" placeholder="EMAIL Address" value="{{value}}" style="margin-top:0" > 
+                </div>         
+                {% endfor %}
+                </div>
+
+
+
+                    <img src="http://127.0.0.1:5000/img/{{userid}}.jpg" class="profilepic" />
+
+
+            </form>
+
+        </div>
+    
+        
+
+        <img class="bg" src="bg.webp" />
+    
+    
+    
+    </div>
+
+
+    <footer>
+        LOGIN WITH FACE RECOGNITION
+    </footer>
+    
+</body>
+</html>

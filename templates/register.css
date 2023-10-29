@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Fira Sans;
+}
+
+body {
+    background-color: #413585;
+    min-height: 100vh;
+}
+
+nav {
+    height: 80px;
+    background-color: #FFFFFF80;
+}
+
+nav a {
+    background-color: #332966;
+
+    text-align: center;
+    display: flex;
+
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.main {
+    display: flex;
+    height: calc(100vh - 160px);
+
+}
+
+.main .bg {
+    width: calc(100vw - 350px);
+    position: absolute;
+    z-index: -2000;
+    object-fit: contain;
+    height: calc(100vh - 160px);
+    right: 10%;
+}
+
+footer {
+    background-color: #332966;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bolder;
+
+    letter-spacing: 1.3rem;
+    color: #28D3BC;
+}
+
+
+
+
+/*  */
+
+
+.regbox {
+    width: 80vw;
+    height: calc(100vh - 180px);
+    background-color: #33296650;
+    align-self: center;
+    border-radius: 31px;
+    border: 5px solid #28D3BC;
+    font-weight: bolder;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #D6D3E0;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+form {
+    display: grid;
+    grid-template-columns: 10fr 9fr;
+}
+
+.name {
+margin-top: 20px;
+}
+
+.name input {
+    margin-top: 0;
+    width: 49%;
+    display: inline-block;
+}
+
+form input {
+width: 99%;
+height: 40px;
+border-radius: 8px;
+padding-left: 10px;
+display: block;
+margin-top: 30px;
+background-color: #FFFFFF;
+letter-spacing: 5px;
+border: none;
+}
+
+.uploadbtn {
+    width: 99%;
+height: 40px;
+border-radius: 8px;
+}
+
+.tandc {
+
+}
+
+.tandc input {
+    display: inline;
+    width: 10%;
+    height: 20px;
+
+}
+
+.tandc p {
+    display: inline;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.button {
+    width: 40% ;
+    padding: 10px;
+    background-color: #28D3BC;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    border: none;
+
+
+}
+
+a {
+    align-self: start;
+    text-decoration: none;
+    color: #28D3BC;
+    padding-left: 10px;
+    letter-spacing: .2rem;
+}
+
+
+
+/* register screen */
+
+.profilepic {
+    height: 300px;
+    object-fit: contain;
+    z-index: 1000;
+    border-radius: 10px;
+    margin-left: 50px;
+    aspect-ratio:1/1;
+}
+
+.updatebtn {
+    width: 35% ;
+    padding: 9px;
+    background-color: #28D3BC;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: none;
+
+}
+
+.each {
+    background-color: #00000080;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bolder;
+}

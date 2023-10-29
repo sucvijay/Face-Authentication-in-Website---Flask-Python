@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" >
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+
+</head>
+<body>
+    <nav>
+        <a href="register" id="register" >REGISTER</a>
+    </nav>
+
+    <div class="main">
+
+
+        <div class="regbox">
+
+            <form action="/create" method="post" enctype="multipart/form-data" >
+                <div>
+                    <h2 style="text-align: center;">LOGIN</h2>
+                    <div class="name">
+                    <input type="text" name="fName" placeholder="First Name" >
+                    <input type="text" name="lName" placeholder="Last Name" >
+                </div>
+
+                    <input type="text" name="email" placeholder="EMAIL Address" >
+                    <input type="text" name="registerNo" placeholder="Register Number" >
+                    <input type="text" name="password" placeholder="Password" >
+                    <input type="text" name="confirmPassword" placeholder="Confirm Password" >
+    
+                    <div class="tandc">
+                    <input type="radio" name="tandc" style="display: inline-block;">
+    
+                    <p href="forget">I Agree to the Terms and Conditions</p>
+                </div>
+                </div>
+
+
+                <div style="width: 100%; height:100%; position:relative">
+                    <h2 style="text-align: center;">UPLOAD IMAGE FOR FACE RECOGNITION</h2>
+                    <input type="file" style="display: none;" id="file" name="file" />
+
+                    <button onclick="document.getElementById('file').click()" class="uploadbtn" type="button" style="margin-top: 20px; width:70%;margin-left:60px;">Tap to Upload</button>
+
+
+                    <button class="button" type="submit"  >REGISTER</button>
+
+                </div>
+ 
+
+            </form>
+
+        </div>
+    
+        <img class="bg" src="bg.webp" />
+    </div>
+
+
+    <footer>
+        LOGIN WITH FACE RECOGNITION
+    </footer>
+    
+</body>
+</html>
